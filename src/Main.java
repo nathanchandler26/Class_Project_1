@@ -1,6 +1,7 @@
 import java.io.*;
 import java.util.Scanner;
 import java.util.*;
+import static java.lang.Integer.parseInt;
 
 public class Main
 {
@@ -9,7 +10,7 @@ public class Main
         Scanner myObj = new Scanner(System.in); // Get the number of groups
         System.out.println("Enter Number of Groups:"); // Display for user input
 
-        String numGroups = myObj.nextLine(); // Read the users input
+        int numGroups = parseInt(myObj.nextLine()); // Read the users input
 
         ArrayList<String> myList = new ArrayList<>(); // Declare an array for the list of names
 
@@ -25,6 +26,20 @@ public class Main
 
         Collections.shuffle(myList);
         System.out.print(myList);
+
+        ArrayList<List<String>> teams = new ArrayList<>(); // Declare an array for the list of names
+
+
+        int size = myList.size() / numGroups;
+        int extra = myList.size() % numGroups;
+
+
+        for (int i = 0; i < numGroups; i++) {
+            teams.add(new ArrayList<String>(myList.subList(i * size, i * size + size)));
+        }
+
+
+        System.out.println(teams);
 
         sc.close();  //closes the scanner
     }
