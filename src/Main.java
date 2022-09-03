@@ -25,7 +25,7 @@ public class Main
         }
 
         Collections.shuffle(myList);
-        System.out.print(myList);
+        System.out.println(myList);
 
         ArrayList<List<String>> teams = new ArrayList<>(); // Declare an array for the list of names
 
