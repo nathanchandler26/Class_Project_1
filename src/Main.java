@@ -15,7 +15,7 @@ public class Main
 
         // Parsing a CSV file into Scanner class constructor
         Scanner sc = new Scanner(new File("src/Project1_Names.csv"));
-        sc.useDelimiter(",");   // Sets the delimiter pattern
+        sc.useDelimiter("\n");   // Sets the delimiter pattern
 
         while (sc.hasNext())  // Returns a boolean value
         {
