@@ -38,6 +38,11 @@ public class Main
             teams.add(new ArrayList<String>(myList.subList(i * size, i * size + size)));
         }
 
+        for (int i = 0; i < extra; i++) {
+            List<String> temp = teams.get(i);
+            temp.add(myList.get(myList.size() - i - 1));
+            teams.set(i, temp);
+        }
 
         System.out.println(teams);
 
