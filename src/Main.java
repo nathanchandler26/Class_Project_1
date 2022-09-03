@@ -19,22 +19,14 @@ public class Main
 
         while (sc.hasNext())  // Returns a boolean value
         {
-            //System.out.print(sc.next());  // Find and returns the next complete token from this scanner
             String name = sc.next();
-            //myList.add(sc.next());
             myList.add(name);
         }
 
-        //sc.close();  //closes the scanner
+        Collections.shuffle(myList);
+        System.out.print(myList);
 
-
-        //System.out.println(myList.get(0));
-
-        System.out.print(myList.size());
-
-        //Collections.shuffle(myList);
-
-        //System.out.println(myList);
+        sc.close();  //closes the scanner
     }
 }
 
